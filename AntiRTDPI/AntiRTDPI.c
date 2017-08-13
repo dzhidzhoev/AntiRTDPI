@@ -3,7 +3,7 @@
 //  AntiRTDPI
 //
 //  Created by Vladislav Dzhidzhoev on 12.08.17.
-//  Copyright © 2017 Education Kids. All rights reserved.
+//  Copyright © 2017 Vladislav Dzhidzhoev. All rights reserved.
 //
 
 #include <sys/systm.h>
