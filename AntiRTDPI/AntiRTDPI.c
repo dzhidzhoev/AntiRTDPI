@@ -103,7 +103,7 @@ errno_t filter_input_func(void *cookie, mbuf_t *data, int offset,
                 && buf[59] == 'n' && buf[60] == 'i' && buf[61] == 'n'
                 && buf[62] == 'g' && buf[63] == '.'
                 && buf[64] == 'r' && buf[65] == 't') {
-                            printf("AntiRTDPI triggered!\n");
+                            //printf("AntiRTDPI triggered!\n");
                             return EAGAIN;
             }
         }
