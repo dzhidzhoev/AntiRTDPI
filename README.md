@@ -1,5 +1,6 @@
 # AntiRTDPI
-macOS kernel extension helping to neutralise Rostelecom's passive DPI. Simple and dirty.
+macOS kernel extension helping to neutralise Rostelecom's passive DPI. 
+Simple and dirty.
 Tested on macOS Sierra 10.12.6.
 
 It is an IP Filtering Network Kernel Extension (NKE). It blocks packets being sent by Rostelecom' when you're trying to access website blocked in Russia. It uses simple and stupid search criteria based on beginning of such packets.
@@ -33,4 +34,4 @@ To unload execute this command:
 sudo kextunload /Library/Extensions/AntiRTDPI.kext
 ```
 
-Enjoy! If you experience any issues or have suggestions - I'll be glad to hear you!
+Enjoy it! If you experience any issues or have suggestions - I'll be glad to hear you!
