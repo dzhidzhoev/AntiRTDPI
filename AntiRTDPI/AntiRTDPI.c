@@ -96,19 +96,15 @@ errno_t filter_input_func(void *cookie, mbuf_t *data, int offset,
         int http_offset = 4 * (tcp[12] >> 4);
         if (100 - http_offset >= 66) {
             unsigned char *buf = &(tcp[http_offset]);
-            if (buf[0] == 'H' && buf[1] == 'T')
-            {
-                if (buf[2] == 'T' && buf[3] == 'P')
-                {
-                    if (buf[9] == '3' && buf[10] == '0' && buf[11] == '2')
-                    {
-                        if (buf[56] == 'w' && buf[57] == 'a' && buf[64] == 'r'
-                            && buf[65] == 't') {
+            if (buf[0] == 'H' && buf[1] == 'T'
+                && buf[2] == 'T' && buf[3] == 'P'
+                && buf[9] == '3' && buf[10] == '0' && buf[11] == '2'
+                && buf[56] == 'w' && buf[57] == 'a' && buf[58] == 'r'
+                && buf[59] == 'n' && buf[60] == 'i' && buf[61] == 'n'
+                && buf[62] == 'g' && buf[63] == '.'
+                && buf[64] == 'r' && buf[65] == 't') {
                             printf("AntiRTDPI triggered!\n");
                             return EAGAIN;
-                        }
-                    }
-                }
             }
         }
     }
