@@ -39,7 +39,7 @@ kern_return_t AntiRTDPI_start(kmod_info_t * ki, void *d)
     }
     else
     {
-        printf("AntiRTDPI error: can't register socket filter, %d\n", err);
+        printf("AntiRTDPI error: can't register IP filter, %d\n", err);
         printf("AntiRTDPI has started with error!\n");
     }
     return KERN_SUCCESS;
