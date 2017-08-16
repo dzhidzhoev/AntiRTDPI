@@ -29,7 +29,7 @@ To load kernel extension execute this command:
 sudo kextload /Library/Extensions/AntiRTDPI.kext
 ```
 
-Note: if you see '/Library/Extensions/AntiRTDPI.kext failed to load - (libkern/kext) dependency resolution failure; check the system/kernel logs for errors or try kextutil(8)' error message you should update kext's dependencies and rebuild it. To update kext's dependencies execute 'kextlibs -xml /Library/Extensions/AntiRTDPI.kext', copy output, open project's Info.plist file and replace '<key>OSBundleLibraries</key><dict>...</dict>' section with copied output. Then rebuild project and use new kext file.
+Note: if you see ```/Library/Extensions/AntiRTDPI.kext failed to load - (libkern/kext) dependency resolution failure; check the system/kernel logs for errors or try kextutil(8)``` error message you should update kext's dependencies and rebuild it. To update kext's dependencies execute ```kextlibs -xml /Library/Extensions/AntiRTDPI.kext```, copy output, open project's Info.plist file and replace ```<key>OSBundleLibraries</key><dict>...</dict>``` section with copied output. Then rebuild project and use new kext file.
 
 To unload execute this command:
 ```
